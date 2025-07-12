@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.tailwindcss.com"></script> 
+    <script src="index.js"></script> 
+    <title>Personel Portfolio</title>
+    <style>
+            html {
+            scroll-behavior: smooth;
+        }
+  
+
+
+        
+ footer{
+   background-color: var(--secondary);
+   color:black;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   flex-wrap: wrap;
+   text-align: center;
+   padding:1rem;
+   width: 100%;
+   margin-bottom: 20px;
+
+   background-color:grey;
+ }
+
+ footer div{
+   flex-basis: 20%;
+ }
+
+ footer h1{
+   letter-spacing: 0.5rem;
+ }
+
+footer h1 span{
+   color: var(--primary);
+}
+
+footer p{
+   font-size: 1rem;
+   }
+
+   footer i{
+      margin: 10px 15px;
+   };
+
+   @media (max-width: 768px) {
+    footer{
+   background-color: var(--secondary);
+   color:blue;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   flex-wrap: wrap;
+   text-align: center;
+   padding:1rem;
+   width: 10px;
+   margin-bottom: 20px;
+   background-color:red;
+ }
+            
+        }
+
+
+   @media (max-width: 375px) {
+    footer{
+   background-color: var(--secondary);
+   color:blue;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   flex-wrap: wrap;
+   text-align: center;
+   padding:2rem;
+   width: 362px;
+   margin-bottom: 12px;
+   background-color:red;
+ }
+            
+        }
+
+        </style>
+    
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md p-4 fixed w-full top-0 left-0 z-50">
+      <div class="max-w-7xl mx-auto flex justify-between items-center">
+        
+        <!-- Logo -->
+        <a href="#" class="text-xl font-bold">MyPortfolio</a>
+  
+        <!-- Menu Icon -->
+        <button id="menu-btn" class="block lg:hidden text-gray-700 focus:outline-none">
+          <svg id="open-icon" class="w-8 h-8 block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+          <svg id="close-icon" class="w-8 h-8 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+  
+        <!-- Desktop Menu -->
+        <ul class="hidden lg:flex space-x-6">
+          <li><a href="#home" class="text-gray-700 hover:text-rose-500">Home</a></li>
+          <li><a href="#about" class="text-gray-700 hover:text-blue-500">About</a></li>
+          <li><a href="#education" class="text-gray-700 hover:text-blue-500">Education</a></li>
+          <li><a href="#skills" class="text-gray-700 hover:text-blue-500">Skills</a></li>
+          <li><a href="#projects" class="text-gray-700 hover:text-blue-500">Projects</a></li>
+          <li><a href="#contact" class="text-gray-700 hover:text-blue-500">Contact</a></li>
+          <a href="#resume" class="block text-gray-700 hover:text-blue-500 menu-link">Resume</a>
+        </ul>
+      </div>
+  
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden lg:hidden bg-white mt-2 p-4 space-y-2">
+        <a href="#home" class="block text-gray-700 hover:text-rose-500 menu-link">Home</a>
+        <a href="#about" class="block text-gray-700 hover:text-blue-500 menu-link">About</a>
+        <a href="#education" class="block text-gray-700 hover:text-blue-500 menu-link">Education</a>
+        <a href="#skills" class="block text-gray-700 hover:text-blue-500 menu-link">Skills</a>
+        <a href="#projects" class="block text-gray-700 hover:text-blue-500 menu-link">Projects</a>
+        <a href="#contact" class="block text-gray-700 hover:text-blue-500 menu-link">Contact</a>
+        <a href="#resume" class="block text-gray-700 hover:text-blue-500 menu-link">Resume</a>
+
+      </div>
+    </nav>
+  
+    <!-- Sections -->
+    <div class="mt-20 p-6">
+      <h2 id="home" class="text-2xl font-bold mb-4"></h2>
+      <div
+            class="h-screen w-full mx-auto py-20 xl:px-16 xs:px-8 flex md:flex-row xs:flex-col gap-4 justify-center items-center pb-10 pt-4">
+            <div class="w-full">
+                <img class="rounded-full md:max-w-[70%] sm:max-w-[50%] xs:max-w-[60%] mx-auto" src="./img/Screenshot_20230210-134245_Gallery[1].jpg"t="My Image" />
+            </div>
+            <div class="w-full flex flex-col justify-center gap-4 text-blue dark:text-blue-800 md:mt-0 sm:mt-8 xs:mt-4">
+                <h1 class="text-4xl font-semibold font-serif">Hello, I'm Sonika Rastogi</h1>
+                <h3 class="capitalize text-rose-400">i'm <span class="typing text-green-500 dark:text-green-700">Software developer</span></h3>
+               
+                <div class="sm:mt-4 xs:mt-2">
+                 
+                </div>
+            </div>
+        </div>
+    </div>
+    
+  
+      <h2 id="about" class="text-2xl font-bold mb-4"></h2>
+      <section  id="about" class="pt-10 overflow-hidden bg-gray-50 dark:bg-gray-800 md:pt-0 sm:pt-16 2xl:pt-16">
+        <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+            <div class="grid items-center grid-cols-1 md:grid-cols-2">
+
+    
+                <div>
+                    <h2 id="about" class="text-2xl font-bold mb-4"></h2>
+       
+                    <h1 class="text-4xl font-bold mb-8">About Me</h1>
+                    <h2 class="text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl lg:text-5xl">Hey 👋 I
+                        am
+                        <br class="block sm:hidden" />Sonika Rastogi
+                    </h2>
+                    <p class="max-w-lg mt-3 text-xl leading-relaxed text-gray-600 dark:text-gray-300 md:mt-8">
+                        I'm Sonika passionate about software development.
+                        I enjoy coding, problem-solving, and creating innovative solutions.
+                        Let's connect and build something great!
+    
+                    <p class="mt-4 text-xl text-gray-600 dark:text-gray-300 md:mt-8">
+                        <span class="relative inline-block">
+                            <span class="absolute inline-block w-full bottom-0.5 h-2 bg-yellow-300 dark:bg-gray-900"></span>
+                        <span class="relative"> Have a question? </span>
+                        </span>
+                        
+                </span>
+               
+            <br class="block sm:hidden" /> <a href="https://www.linkedin.com/in/sonika-rastogi-6a8a03301/" title=""
+            class="transition-all duration-200 text-sky-500 dark:text-sky-400 hover:text-sky-600 dark:hover:text-sky-500 hover:underline">linkedin</a>
+                </div>
+    
+                <div class="relative">
+                    <img class="absolute inset-x-0 bottom-0 -mb-30 left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:scale-90 md:scale-100 z-[-1]"  src="https://cdn.rareblocks.xyz/collection/celebration/images/team/1/blob-shape.svg" alt="" />
+    
+                    <img class="relative w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-110 sm:scale-90 md:scale-100" src="" alt="" />
+                </div>
+    
+            </div>
+        </div>
+
+            <!-- Experience Section -->
+
+    
+               
+    </section>
+    </section>  
+      <h2 id="education" class="text-2xl font-bold mb-4"></h2>
+      <section id="education" class="pt-16 h-screen bg-blue-100 flex items-center justify-center">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold mb-8">Education</h1>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-semibold">Master Of Computer Application</h2>
+                <p class="text-gray-600"> Field : Machine & Artificial Intilligence  </p>
+                <p class="text-gray-600">Amity University Online, 2024-2026 </p>
+                </div>
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold">Bachelor of Commerce</h2>
+        <p class="text-gray-600">Mahatma Gandhi Kashi Vidhya Peeth, 2016 - 2019</p>
+        </div>
+    <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold">Intermediate</h2>
+        <p class="text-gray-600">Aryavart Inter College, 2014 - 2016</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold">High School</h2>
+        <p class="text-gray-600">Aryavart Inter College, 2014</p>
+    </div>
+ 
+</div>
+</div>
+      </section>
+      <h2 id="skills" class="text-2xl font-bold mb-4"></h2>
+      <section id="skill0." class="pt-16 bg-gray-100 flex items-center justify-center">
+        <div class="container mx-auto">
+            <h1 class="text-4xl font-bold mb-8 text-center">Skills </h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h2 class="text-2xl font-semibold mb-2">Programming Languages</h2>
+                    <ul class="list-disc list-inside text-left text-gray-700">
+                        <li>JavaScript</li>
+                        <li>Node.js</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h2 class="text-2xl font-semibold mb-2">Web Development</h2>
+                    <ul class="list-disc list-inside text-left text-gray-700">
+                        <li>HTML & CSS</li>
+                        <li>Node.js</li>
+                        <li>Express</li>
+                        <li>API</li>
+                        <li>CRUD</li>
+                            <li>JWT</li>
+                                <li>Reactjs</li>
+
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h2 class="text-2xl font-semibold mb-2">Databases</h2>
+                    <ul class="list-disc list-inside text-left text-gray-700">
+                        <li>MySQL</li>
+                        <li>MongoDB</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h2 class="text-2xl font-semibold mb-2">Tools & Technologies</h2>
+                    <ul class="list-disc list-inside text-left text-gray-700">
+                        <li>Git & GitHub</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h2 class="text-2xl font-semibold mb-2">Deployment</h2>
+                    <ul class="list-disc list-inside text-left text-gray-700">
+                        <li>Netlify</li>
+                        <li>Heroku</li>
+                    </ul>
+                </div>
+            </div>
+        </div></div>
+                
+    </section>
+      
+  
+      <h2 id="projects" class="text-2xl font-bold mb-4"></h2>
+      <section id="projects" class="pt-16 bg-gray-100 flex items-center justify-center">
+        <div class="container mx-auto">
+            <h1 class="text-4xl font-bold mb-8 text-center">Projects</h1>
+            <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 gap-2 max-w-9xl mx-auto"></div>
+            <!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> -->
+                <!-- Project 1 -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-8xl mx-auto p-4">
+  
+                    <!-- Project 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
+                      <img src="./img/weather-photo-186980.jpeg" alt="Project 1" class="rounded-lg mb-4 w-full h-56 object-cover">
+                      <h2 class="text-2xl font-semibold mb-2">Project 1</h2>
+                      <p class="text-gray-700 mb-4">Ecommerce Website</p>
+                      <a href="https://github.com/Sonika21-rastogi/WebsiteEcom" class="text-blue-500 hover:underline">View on GitHub</a>
+                    </div>
+                  
+                    <!-- Project 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
+                      <img src="./img/weather-photo-186980.jpeg" alt="Project 2" class="rounded-lg mb-4 w-full h-56 object-cover">
+                      <h2 class="text-2xl font-semibold mb-2">Project 2</h2>
+                      <p class="text-gray-700 mb-4">Blog App</p>
+                      <a href="https://github.com/Sonika21-rastogi/blogapp" class="text-blue-500 hover:underline">View on GitHub</a>
+                    </div>
+                  
+                  </div>
+      </section>
+  
+      <h2 id="contactForm" class="text-2xl font-bold mb-4"></h2>
+      <section id="submit-form" class="flex justify-center items-center w-full">
+        <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-md">
+            <h1 class="text-4xl font-bold text-center text-gray-800 mb-6">Contact</h1>
+            
+            <form action="/submit" method="POST" id="contactForm"class="space-y-4">
+                <div>
+                    <label for="name" class="block text-gray-600 font-medium">Name:</label>
+                    <input type="text" id="name" name="name" required
+                        class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+
+                <div>
+                    <label for="email" class="block text-gray-600 font-medium">Email:</label>
+                    <input type="email" id="email" name="email" required
+                        class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+
+                <div>
+                    <label for="message" class="block text-gray-600 font-medium">Message:</label>
+                    <textarea id="message" name="message" required rows="4"
+                        class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-blue-600 text-white py-2 rounded-md font-semibold hover:bg-blue-700 transition">
+                    Submit
+                </button>
+               <p id="successMsg" class="text-green-600 font-semibold text-center mt-4 hidden">
+  ✅ Your message has been sent!
+</p>
+
+            </form>
+
+            <div class="text-gray-800 text-center mt-6">
+                <p class="font-semibold"><i class="fa fa-phone mr-2"></i>+91 8726041337</p>
+                <p class="font-semibold"><i class="fa fa-envelope mr-2"></i>rastogi.sonika1999@gmail.com</p>
+            </div>
+        </div>
+    </section> 
+
+<h2 id="resume" class="text-2xl font-bold mb-4"></h2>
+<section id="resume" class="pt-16 bg-gray-100 flex items-center justify-center">
+    <div class="container mx-auto text-center">
+        <h1 class="text-4xl font-bold mb-8">Resume</h1>
+        <p class="text-lg text-gray-700 mb-8">You can download my resume by clicking the button below.</p>
+        <a href="/public/img/IT_CV_.pdf" download class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Download Resume
+        </a>
+    </div>
+    
+    </section> <br><br><br>
+  
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer"></script>
+    <script>
+        var typed = new Typed('.typing', {
+        strings: ['', 'Full-stack Developer,', 'Frontend Developer,', 'Backend Developer'],
+        typeSpeed: 100,
+        BackSpeed: 60,
+        loop: true
+    })
+
+    tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          screens: {
+            xs: '320px',
+            sm: '480px',
+            md: '768px',
+            lg: '976px',
+            xl: '1440px',
+          },
+          extend: {
+          }
+        }
+      }
+
+  const form = document.getElementById("contactForm");
+  const successMsg = document.getElementById("successMsg");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault(); // prevent default page reload
+
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch("/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      });
+
+      const result = await response.json();
+      
+      if (response.ok) {
+        successMsg.innerText = `✅ ${result.message}`;
+        successMsg.classList.remove("hidden");
+        form.reset(); // clear form
+      } else {
+        alert("❌ Something went wrong: " + result.error);
+      }
+    } catch (err) {
+      alert("❌ Server error. Try again later.");
+      console.error(err);
+    }
+  });
+
+
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const openIcon = document.getElementById("open-icon");
+    const closeIcon = document.getElementById("close-icon");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+      openIcon.classList.toggle("hidden");
+      closeIcon.classList.toggle("hidden");
+    });
+
+
+    </script>
+    <body class="min-h-screen flex flex-col bg-black text-white">
+
+  
+         
+  <footer class="bg-gray-900 text-white py-8 mt-auto">
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- Grid layout for responsive columns -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center sm:text-left">
+      
+      <!-- About -->
+      <div>
+        <h3 class="text-lg font-semibold text-blue-400">MyPortfolio</h3>
+        <p class="text-gray-400 mt-2">
+          Building creative and responsive web experiences.
+        </p>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h3 class="text-lg font-semibold text-blue-400">Contact Info</h3>
+        <p class="text-gray-400 mt-2">rastogi.sonika1999@gmail.com</p>
+        <p class="text-gray-400">+91 8726041337</p>
+      </div>
+
+      <!-- Social Media -->
+      <div>
+        <h3 class="text-lg font-semibold text-blue-400">Connect with Me</h3>
+        <div class="flex justify-center sm:justify-start space-x-4 mt-3">
+          <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-blue-500 transition"><span>🔵</span></a>
+          <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-blue-500 transition"><span>🐦</span></a>
+          <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-blue-500 transition"><span>🔗</span></a>
+          <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-blue-500 transition"><span>🐙</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom line -->
+    <div class="text-center text-gray-500 text-sm mt-6 border-t border-gray-700 pt-4">
+      © 2025 Your Name. All rights reserved.
+    </div>
+  </div>
+</footer>
+    
+</body>
+</html>
