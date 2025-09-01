@@ -233,20 +233,24 @@ footer p{
                     <h2 class="text-2xl font-semibold mb-2">Programming Languages</h2>
                     <ul class="list-disc list-inside text-left text-gray-700">
                         <li>JavaScript</li>
-                        <li>Node.js</li>
+                        <li>HTML, CSS</li>
+                        
                     </ul>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <h2 class="text-2xl font-semibold mb-2">Web Development</h2>
+                    <h2 class="text-2xl font-semibold mb-2">Frontend Development</h2>
                     <ul class="list-disc list-inside text-left text-gray-700">
-                        <li>HTML & CSS</li>
-                        <li>Node.js</li>
-                        <li>Express</li>
-                        <li>API</li>
-                        <li>CRUD</li>
-                            <li>JWT</li>
-                                <li>Reactjs</li>
+                                <li>React.js</li>
+                           
 
+                    </ul>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h2 class="text-2xl font-semibold mb-2">Backend Development / Server-Side:</h2>
+                    <ul class="list-disc list-inside text-left text-gray-700">
+                        <li>Node.js, Express.js</li>
+                        <li>API Development, CRUD Operations</li>
+                        <li>Authentication & Security: JWT, Bcrypt.js</li>
                     </ul>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md text-center">
@@ -286,7 +290,7 @@ footer p{
   
                     <!-- Project 1 -->
                     <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
-                      <img src="./img/weather-photo-186980.jpeg" alt="Project 1" class="rounded-lg mb-4 w-full h-56 object-cover">
+                      <img src="./img/ecomm.jpeg.jpg" alt="Project 1" class="rounded-lg mb-4 w-full h-56 object-cover">
                       <h2 class="text-2xl font-semibold mb-2">Project 1</h2>
                       <p class="text-gray-700 mb-4">Ecommerce Website</p>
                       <a href="https://github.com/Sonika21-rastogi/WebsiteEcom" class="text-blue-500 hover:underline">View on GitHub</a>
@@ -294,7 +298,7 @@ footer p{
                   
                     <!-- Project 2 -->
                     <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
-                      <img src="./img/weather-photo-186980.jpeg" alt="Project 2" class="rounded-lg mb-4 w-full h-56 object-cover">
+                      <img src="./img/blog.jpg" alt="Project 2" class="rounded-lg mb-4 w-full h-56 object-cover">
                       <h2 class="text-2xl font-semibold mb-2">Project 2</h2>
                       <p class="text-gray-700 mb-4">Blog App</p>
                       <a href="https://github.com/Sonika21-rastogi/blogapp" class="text-blue-500 hover:underline">View on GitHub</a>
@@ -303,7 +307,7 @@ footer p{
                   </div>
       </section>
   
-      <h2 id="contactForm" class="text-2xl font-bold mb-4"></h2>
+      <!-- <h2 id="contactForm" class="text-2xl font-bold mb-4"></h2>
       <section id="submit-form" class="flex justify-center items-center w-full">
         <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-md">
             <h1 class="text-4xl font-bold text-center text-gray-800 mb-6">Contact</h1>
@@ -335,7 +339,46 @@ footer p{
   ✅ Your message has been sent!
 </p>
 
-            </form>
+            </form> -->
+
+            <form id="contactForm" class="max-w-md mx-auto p-6 bg-white rounded shadow">
+  <h2 class="text-xl font-bold mb-4">Contact Us</h2>
+
+  <input type="text" name="name" placeholder="Your Name" required
+    class="w-full mb-3 p-2 border rounded" />
+  
+  <input type="email" name="email" placeholder="Your Email" required
+    class="w-full mb-3 p-2 border rounded" />
+  
+  <textarea name="message" placeholder="Your Message" required
+    class="w-full mb-3 p-2 border rounded"></textarea>
+  
+  <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+    Submit
+  </button>
+</form>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const form = e.target;
+  const formData = {
+    name: form.name.value,
+    email: form.email.value,
+    message: form.message.value
+  };
+
+  const res = await fetch('/submit', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(formData)
+  });
+
+  const data = await res.json();
+  alert(data.message);
+  form.reset();
+});
+</script>
 
             <div class="text-gray-800 text-center mt-6">
                 <p class="font-semibold"><i class="fa fa-phone mr-2"></i>+91 8726041337</p>
@@ -349,7 +392,7 @@ footer p{
     <div class="container mx-auto text-center">
         <h1 class="text-4xl font-bold mb-8">Resume</h1>
         <p class="text-lg text-gray-700 mb-8">You can download my resume by clicking the button below.</p>
-        <a href="/public/img/IT_CV_.pdf" download class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <a href="/img/SonikaFullstack1y0m.pdf" download class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
             Download Resume
         </a>
     </div>
@@ -391,7 +434,7 @@ footer p{
     const data = Object.fromEntries(formData.entries());
 
     try {
-      const response = await fetch("/submit", {
+      const res = await fetch("/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
